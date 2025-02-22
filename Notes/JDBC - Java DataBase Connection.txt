@@ -1,0 +1,36 @@
+JDBC -> Java DataBase Connection
+	Connecting your java application to interact with your database.
+
+Seven Steps:
+	1. import the package 
+		- (java.sql.*)
+	2. Load & Register the drivers
+		a. Load -> com.mysql.jdbc.Driver
+		b. Register -> forName(com.mysql.jdbc.Driver)
+	3. Establish the Connection
+		- Create a instant of the Connection
+	4. Create a statement
+		- Statement
+		- Prepared Statement
+		- Collable Statement
+	5. Execute the Query
+	6. Process Result
+	7. Close the connection
+
+How to Write this in the form of a program?
+-> 
+import java.sql.*
+main(){
+	Class.forName("com.mysql.jdbcDriver");
+	//connection & statement, ResultSet are interfaces;
+	Connecion con = DriverManager.getConnection("URL","username","password");
+	Statement st = con.createStatment();
+	ResultSet rs = st.executeQuery("select * from student");
+	
+	while(rs.next()){
+		sout(rs.getInt(1)+" "+rs.getString(2));
+	}
+}
+
+Question of the video: Founder of Oracle? -> Larry Ellison
+

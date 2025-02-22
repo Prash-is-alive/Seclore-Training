@@ -1,0 +1,75 @@
+Multithreading Concept in Java.
+
+- Multithreading is the process of executing multiple threads simultaneously.
+- A thread is a lightweight sub-process, the smallest unit of processing.
+ex. downloading multiple files from internet at the same time.(Multithreading)
+-Multiple Processes (apps) running at the same time (Multiprocessing)
+
+-- Creating a Thread in Java
+1. using Runnable interface
+	interface Runnable{
+		run();
+	}
+myThread implements Runnable.
+
+OR
+
+2. using Thread class
+	class Thread{}
+-Thread already implements Runnable.
+
+myThread extends Thread.
+
+
+--Starting a Thread in Java
+
+1. Using Runnable interface
+class MyThread implements Runnable{
+	void run(){
+	//task
+	}
+}
+
+MyThread t = new MyThread();
+Thread thread = new Thread(t);
+thread.start();
+
+2. Using Thread Class
+class MyThread extends Thread{
+	void run(){
+	//tasks
+	}
+}
+MyThread t = new MyThread();
+t.start();
+
+
+using Method 1 (Runnable interface is recommended).
+
+
+LifeCycle of a Thread.
+
+New -> Runnable -> Running -> Terminated
+       |Non Runnable (Blocked)|
+
+Thread Operations
+-> public string getName() - returns the name of the Thread
+-> public void setName() - set the name of the thread
+-> public void run() - contains the task of a thread
+-> public long getId() - returns the ID of the thread
+-> setPriority(), getPriority() - set & get the priority.
+-> sleep(),join(),interrupt(),resume(),stop()...etc.
+
+
+Daemon Thread
+- Daemon threads in java is a service provider thread that provides services to the user thread.
+ex. Garbage Collector
+some methods => setDaemon(Boolean) &  Boolean isDaemon()
+
+Producer - Consumer Problem
+The producer generates and stores items if the buffer isn't full, the consumer retrieves items if it's not empty, and both cannot access the buffer simultaneously.
+
+
+
+	
+
