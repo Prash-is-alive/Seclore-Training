@@ -1,0 +1,36 @@
+Native Keyword in java.
+
+- native keyword in java is used for methods which have do defination in java by itself, instead it is written in other low level lang like C/C++.
+- This is done to achieve efficiency. Since C/C++ may have better hardware level access than java. so the hardware level implementation/ functions are written in C/C++,
+  then it is used in java using the native keyword. the Java Native Interface (JNI) helps in resolving such cases.
+
+Key Points About native Keyword:
+- It is used to declare methods whose implementation is provided in native code (C/C++).
+- Such methods interact with the Java Native Interface (JNI).
+- Native methods do not have a method body in Java.
+
+example: 
+-- 1. Declaring a Native Method
+public class NativeExample {
+    // Native method declaration
+    public native void displayMessage();
+
+    // Load the native library
+    static {
+        System.loadLibrary("NativeLib");
+    }
+
+    public static void main(String[] args) {
+        NativeExample example = new NativeExample();
+        example.displayMessage(); // Calls the native method
+    }
+}
+
+-- 2. Native Method Implementation in C (JNI - Java Native Interface)
+#include <jni.h>
+#include <stdio.h>
+#include "NativeExample.h"
+
+JNIEXPORT void JNICALL Java_NativeExample_displayMessage(JNIEnv *env, jobject obj) {
+    printf("Hello from C!\n");
+}
