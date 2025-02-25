@@ -1,4 +1,4 @@
-Don't want to make an Object of a Class?
+--- Don't want to make an Object of a Class?
 - make it's contructor private.
 But can we achieve this by making the class as an abstract class?
 - Making the class an abstract can prevent creating the object of that abstract class, but it will forward this reponsibility to the sub-classes.
@@ -18,3 +18,18 @@ public class Main {
         System.out.println(MathUtils.square(5)); // ✅ Prints: 25
     }
 }
+
+--- StringBuffers will have a capacity of 16 at the start. after that they will keep an extra continuous space of 16 characters. 
+    This is done so that the append and other operations can be done on the same string (array) easily.
+    Later on, with increasing size, the size of the buffer (array) is dynamically increased by the JVM.
+
+--- While doing, 
+String str1 = "Hello";
+String str2 = "World";
+String newStr = str1 + str2;
+- The '+' operation internally uses StringBuffer for appending.
+- The compiler converts the above program to 
+    => newStr = new StringBuffer().append(str1).append(str2).toString();
+The native append operation is slow (even after using buffer in the back),
+since appending multiple strings creats more and more objects of buffer in the back. 
+This slows slows down the performance since many useless buffer objects are created.
