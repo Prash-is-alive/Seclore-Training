@@ -1,0 +1,20 @@
+Don't want to make an Object of a Class?
+- make it's contructor private.
+But can we achieve this by making the class as an abstract class?
+- Making the class an abstract can prevent creating the object of that abstract class, but it will forward this reponsibility to the sub-classes.
+- making the constructor of a class as private will strictly prevent the object creation. object of that class or it's subclasses cannot be created.--
+-- where to use this feature?
+public class MathUtils {
+    private MathUtils() {} // Prevent instantiation
+
+    public static int square(int num) {
+        return num * num;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // MathUtils obj = new MathUtils(); // ❌ Not allowed
+        System.out.println(MathUtils.square(5)); // ✅ Prints: 25
+    }
+}
