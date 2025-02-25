@@ -33,3 +33,27 @@ String newStr = str1 + str2;
 The native append operation is slow (even after using buffer in the back),
 since appending multiple strings creats more and more objects of buffer in the back. 
 This slows slows down the performance since many useless buffer objects are created.
+
+--- Does Java use pass by value or pass by reference?
+- By default java uses pass by value. 
+- If you see something like this: 
+    void someMethod(SomeObject obj);
+- then we are not passing the reference to that object. 
+    Instead, we are passing the location of that object as the value to that function.
+
+---  which classes are immutable in Java
+- By default all the Wrapper classes are Immutable in Java.
+- List, Sets & Maps are also immutable. Whereas their implementations (ArrayList, LinkedList, etc.) are mutable.
+- some other classes like Date & Time classes are also immutable.
+
+--- when to use StringBuffer vs StringBuilder?
+- use StringBuffer when you are dealing with multiple threads.
+    All the methods of StringBuffer are 'Synchronized'.
+    Only one thread can access the method at a time.
+    This makes them 'Thread Safe'.
+    It also makes the process a bit slow.
+
+- use StringBuilder when dealing with single thread.
+    no methods here are 'Synchronized'.
+    this makes them very fast compared to buffers.
+    Hence, they are not 'Thread Safe'.
