@@ -18,6 +18,8 @@ public class Main {
         System.out.println(MathUtils.square(5)); // ✅ Prints: 25
     }
 }
+Best real case is in the System.class where the System construtor is Privatized.
+
 
 --- StringBuffers will have a capacity of 16 at the start. after that they will keep an extra continuous space of 16 characters. 
     This is done so that the append and other operations can be done on the same string (array) easily.
