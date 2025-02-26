@@ -1,0 +1,14 @@
++ STRINGS
+
+- codePointAt(int idx)
+  A code point is just an abstract number that represents a character.
+  This will return the unicode value of that character present at that index.
+  eg. "a".codePointAt(0); will print the unicode value of a i.e. 65.
+
+UNICODE A->65 a->97
+- A single character takes 1 code point
+- An Emoji takes 2 code points.
+- In Java length of a string is measured in UTF-16 code points.
+-- Surrogate pairs are used only in UTF-16 (not UTF-8 or UTF-32).
+-- They combine 2 unicodes to form a character beyond u+ffff.
+
