@@ -1,0 +1,23 @@
+enum Season {
+	WINTER, SPRING, SUMMER, FALL
+}
+
+- all the constants declared here are STATIC FINAL.
+- Enums can be traversed. 
+  for(Season s : Season.values()) {
+		System.out.println(s);
+	}
+
+- We can have fields, constructors, methods, and main() methods in Java enum.
+- It internally creates a static and final class for the enum.
+- Java compiler internally adds values(), valueOf() and ordinal() methods within the enum at compile time. 
+values() => returns an array of all the values in enum of type Season.
+valuesOf(String str) => Returns the constant value corresponding to the string.
+ordinal() => will return the index of this enum.
+
+- Enums can be defined inside or outside the class.
+OR We can directly define the main method inside the enum.
+
+-- we can use enums in place of classes to exactly specify that we want only 4 objects (WINTER, SPRING, SUMMER, FALL) and no other object should be created.
+  all the operations that we do on an object will be same for these enum objects that we created.
+-Enums cannot extend a class but can implement an interface.
