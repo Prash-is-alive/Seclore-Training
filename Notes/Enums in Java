@@ -21,3 +21,21 @@ OR We can directly define the main method inside the enum.
 -- we can use enums in place of classes to exactly specify that we want only 4 objects (WINTER, SPRING, SUMMER, FALL) and no other object should be created.
   all the operations that we do on an object will be same for these enum objects that we created.
 -Enums cannot extend a class but can implement an interface.
+
+
++ TypeSafety using enums.
+The primary advantage is type safety. With a set of constants, any value of the same intrinsic type could be used, introducing errors. With an enum only the applicable values can be used.
+
+For example
+
+public static final int SIZE_SMALL  = 1;
+public static final int SIZE_MEDIUM = 2;
+public static final int SIZE_LARGE  = 3;
+public void setSize(int newSize) { ... }
+obj.setSize(15); // Compiles but likely to fail later
+
+vs
+
+public enum Size { SMALL, MEDIUM, LARGE };
+public void setSize(Size s) { ... }
+obj.setSize( /*something related to size only*/ );
