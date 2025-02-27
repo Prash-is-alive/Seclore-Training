@@ -73,3 +73,6 @@ This slows slows down the performance since many useless buffer objects are crea
     eg. try{ return 20; }
         finally { sout("I ran even if your returned statement was called!"); } //This block will be executed.
 - Math.abs(Integer.MIN_VALUE) Produces a Negative Number!
+
+
+Variables in interface are final and cannot be changed by subClasses.
