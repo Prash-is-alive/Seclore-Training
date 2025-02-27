@@ -4,22 +4,21 @@ But can we achieve this by making the class as an abstract class?
 - Making the class an abstract can prevent creating the object of that abstract class, but it will forward this reponsibility to the sub-classes.
 - making the constructor of a class as private will strictly prevent the object creation. object of that class or it's subclasses cannot be created.--
 -- where to use this feature?
-public class MathUtils {
-    private MathUtils() {} // Prevent instantiation
-
-    public static int square(int num) {
-        return num * num;
+    public class MathUtils {
+        private MathUtils() {} // Prevent instantiation
+    
+        public static int square(int num) {
+            return num * num;
+        }
     }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        // MathUtils obj = new MathUtils(); // ❌ Not allowed
-        System.out.println(MathUtils.square(5)); // ✅ Prints: 25
+    
+    public class Main {
+        public static void main(String[] args) {
+            // MathUtils obj = new MathUtils(); // ❌ Not allowed
+            System.out.println(MathUtils.square(5)); // ✅ Prints: 25
+        }
     }
-}
-Best real case is in the System.class where the System construtor is Privatized.
-
+Best real case is in the System & Math classes where the System construtor is Privatized.
 
 --- StringBuffers will have a capacity of 16 at the start. after that they will keep an extra continuous space of 16 characters. 
     This is done so that the append and other operations can be done on the same string (array) easily.
@@ -34,7 +33,7 @@ String newStr = str1 + str2;
     => newStr = new StringBuffer().append(str1).append(str2).toString();
 The native append operation is slow (even after using buffer in the back),
 since appending multiple strings creats more and more objects of buffer in the back. 
-This slows slows down the performance since many useless buffer objects are created.
+This slows down the performance since many useless buffer objects are created.
 
 --- Does Java use pass by value or pass by reference?
 - By default java uses pass by value. 
@@ -75,4 +74,4 @@ This slows slows down the performance since many useless buffer objects are crea
 - Math.abs(Integer.MIN_VALUE) Produces a Negative Number!
 
 
-Variables in interface are final and cannot be changed by subClasses.
++ all fields (variables) in interface are public,static and final.
