@@ -1,0 +1,75 @@
+Cloning in Java
+
+1. Introduction to Cloning
+- Cloning in Java creates an exact copy of an object using the Cloneable interface and the clone() method.
+
+2. Types of Cloning
+-- Shallow Cloning: Copies primitive fields but references the same objects for non-primitive fields.
+-- Deep Cloning: Recursively clones all objects, creating completely independent copies.
+
+3. Implementing Cloning
++ Shallow Cloning Example
+
+class Address {
+    String street, city;
+    Address(String street, String city) { this.street = street; this.city = city; }
+    public String toString() { return street + ", " + city; }
+}
+
+class Person implements Cloneable {
+    String name;
+    int age;
+    Address address;
+    Person(String name, int age, Address address) {
+        this.name = name; this.age = age; this.address = address;
+    }
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
++ Deep Cloning Example
+
+class Person implements Cloneable {
+    String name;
+    int age;
+    Address address;
+    Person(String name, int age, Address address) {
+        this.name = name; this.age = age; this.address = address;
+    }
+    protected Object clone() throws CloneNotSupportedException {
+        Person cloned = (Person) super.clone();
+        cloned.address = new Address(this.address.street, this.address.city);
+        return cloned;
+    }
+}
+
++ Using Copy Constructor
+
+class Person {
+    String name;
+    int age;
+    Address address;
+    Person(String name, int age, Address address) {
+        this.name = name; this.age = age; this.address = address;
+    }
+    // copy constructor of person
+    Person(Person other) {
+        this.name = other.name; this.age = other.age;
+        this.address = new Address(other.address.street, other.address.city);
+    }
+}
+
+4. Flaws of Cloning
+- Complexity: Requires overriding clone() and implementing Cloneable.
+- Performance: Deep cloning is expensive.
+- Immutability Risk: Cloning can break immutability.
+
+5. Alternatives to Cloning
+- Copy Constructors (as shown above).
+- Factory Methods to create copies.
+- Serialization for deep cloning.
+
+6. Conclusion
+- Cloning helps copy objects but has limitations. Use alternative methods when possible for better control and efficiency.
+
