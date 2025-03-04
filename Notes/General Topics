@@ -73,5 +73,21 @@ This slows down the performance since many useless buffer objects are created.
         finally { sout("I ran even if your returned statement was called!"); } //This block will be executed.
 - Math.abs(Integer.MIN_VALUE) Produces a Negative Number!
 
+- all fields (variables) in interface are public,static and final.
 
-+ all fields (variables) in interface are public,static and final.
+- The main method can also be overloaded. This means that a program can have multiple main methods.
+    But the JVM will only choose the default main(String[] args) method. The other overloaded main methods should be called inside this default main method explicitly.
+ex.
+public class MainOverloadExample {
+    psvm(String[] args){
+        syso("Standard main method");
+        main(10);
+        msin("hello");
+    }
+    psvm(int num){
+        syso(num);
+    }
+    psvm(String msg){
+        syso(msg);
+    }
+}
