@@ -1,0 +1,38 @@
+Exceptions in Java.
+- An error which may occur during the exceution of the program.(runtime)
+chekced/unchecked.
+ 
+Exception handling:
+- Ability to deal with the exception that has occured.
+
+java.lang.Exceptions is the parent class of all the exceptions in java.
+
+Object
+	Throwable
+	- There are two subclasses derived from throwable error and exceptions
+	-Error
+		Generally used for reporting system level errors.
+		The maximum size of the array is Integer.MAX_VALUE - 2147483647.
+		Errors are not meant to be caught in the program. we will not be able to handle them at the runtime most likely.
+
+	-Exceptions 
+		Generally used for reporting application level errors.
+The compiler checks only the syntax not the logic.
+
+There are two types of Exceptions, checked and unchecked.
+checked
+- compiler checks if the exceiption is handled or not.
+- Exception class and it's subclasses are cheecked in nature.
+- ex. IOException, SQLException.
+reallife example: fire extingusher.
+
+unchecked
+- compiler does not checks if the exceiption is handled or not.
+- from Exception class, a special subclass by the name RuntimeExceiption is derived.
+- RuntimeException and it's subclasses are unchecked in nature.
+-ex. ArrayIndexOutOfBoundExeption, NullPointerException, ArithmeticException...
+
+In almost all the other lang. all the exceptions are unchecked by default.
+
+-- RuntimeException e = new RuntimeException("Insufficient Balance!");
+if you throw a runtime exception then you don't need to specify the throws in the signature.
