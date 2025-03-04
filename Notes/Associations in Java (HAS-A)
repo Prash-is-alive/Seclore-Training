@@ -1,0 +1,40 @@
+Composition & Aggregation associations in Java
+
+-Both are 'HAS-A' relationship associations
+
+-Composition (Strong Association)
+   - One class owns another class. (Tightly Coupled)
+   - If the parent is destroyed then the child also gets destroyed.
+   - Objects cannot exist independently.
+
+ex.
+class Engine{
+    void start(){
+        syso("Engine started");
+    }
+}
+
+class Car{
+    private Engine engine;
+
+    Car(){
+        engine = new Engine();
+    }
+
+    void startCar(){
+        engine.start();
+        syso("car started!");
+    }
+}
+
+public class Composition Example{
+    psvm(String[] args){
+        Car car = new Car();
+        car.startCar();
+        //if the car object is destroyed then the engine is also automatically destoryed.
+    }
+}
+
+- Aggregation (Weak Association)
+  - The objects can live without one another.
+ex. Student & departments.
