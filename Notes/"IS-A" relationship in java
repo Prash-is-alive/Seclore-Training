@@ -1,0 +1,12 @@
+"IS-A" relationship in Java represents inheritance or implementation.
+- This relationship can be achieved through Inheritance & Implements:
+
+- Inheritance
+ex.
+  Dog IS-A Animal
+  Chrome IS-A Browser
+
+- Implements
+ex.
+  Car IS-A Vehicle
+  Exception IS-A Throwable
