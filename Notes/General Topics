@@ -95,3 +95,18 @@ public class MainOverloadExample {
 // if you want to pass function to a function in java use:
 Function<Integer, Integer> square = i -> i * i;
 System.out.println(square.apply(3));
+
+- Volatile modifier in java
+class SharedObj
+{
+   // Changes made to sharedVar in one thread
+   // may not immediately reflect in other thread
+   static int sharedVar = 6;
+
+   // volatile keyword here makes sure that
+   // the changes made in one thread are 
+   // immediately reflect in other thread
+   static volatile int sharedVar2 = 6;
+}
+- adding 'volatile' keyword tells the JVM to directly commit changes to the main memory instead of caching it.
+- so that all the threads read the correct value of the variable.
