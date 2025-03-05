@@ -91,3 +91,7 @@ public class MainOverloadExample {
         syso(msg);
     }
 }
+
+// if you want to pass function to a function in java use:
+Function<Integer, Integer> square = i -> i * i;
+System.out.println(square.apply(3));
