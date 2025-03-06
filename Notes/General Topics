@@ -111,9 +111,17 @@ class SharedObj
 - adding 'volatile' keyword tells the JVM to directly commit changes to the main memory instead of caching it.
 - so that all the threads read the correct value of the variable.
 
+What is the difference between frameworks and APIs?
 -Frameworks are extensible and APIs are reuseable
     ex. collections framework & string api
+    here the Strings API can be used again and again.
+    and Collection framework provides a defined set of rules that any new (user defined) collection should atleast follow.
 
-- LinkedList has additional methods not in ArrayList due to implementing Deque, including first/last element operations (getFirst(), getLast(), removeFirst(), removeLast(), addFirst(E), addLast(E)), queue operations (offerFirst(E), offerLast(E), pollFirst(), pollLast(), peekFirst(), peekLast()), and stack-like methods (push(E), pop()), while ArrayList has trimToSize() and ensureCapacity(int) for array management, which LinkedList does not need due to its dynamic node-based structure.
+- LinkedList has additional methods not in ArrayList due to implementing Deque, including,
+    first/last element operations (getFirst(), getLast(), removeFirst(), removeLast(), addFirst(E), addLast(E)), 
+    queue operations (offerFirst(E), offerLast(E), pollFirst(), pollLast(), peekFirst(), peekLast()),
+    and stack-like methods (push(E), pop()), 
+- while ArrayList has trimToSize() and ensureCapacity(int) for array management, which LinkedList does not need due to its dynamic node-based structure.
+
 - marker interfaces don't have any method.
-- marker interface examples -> randomacces, serializable, clonable
+- marker interface examples -> RandomAccess interface, Serializable interface, Cloneable interface.
