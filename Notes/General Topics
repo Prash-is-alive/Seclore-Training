@@ -115,3 +115,5 @@ class SharedObj
     ex. collections framework & string api
 
 - LinkedList has additional methods not in ArrayList due to implementing Deque, including first/last element operations (getFirst(), getLast(), removeFirst(), removeLast(), addFirst(E), addLast(E)), queue operations (offerFirst(E), offerLast(E), pollFirst(), pollLast(), peekFirst(), peekLast()), and stack-like methods (push(E), pop()), while ArrayList has trimToSize() and ensureCapacity(int) for array management, which LinkedList does not need due to its dynamic node-based structure.
+- marker interfaces don't have any method.
+- marker interface examples -> randomacces, serializable, clonable
