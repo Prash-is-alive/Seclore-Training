@@ -27,7 +27,7 @@ checked
 reallife example: fire extingusher.
 
 unchecked
-- compiler does not checks if the exceiption is handled or not.
+- compiler does not checks if the exception is handled or not.
 - from Exception class, a special subclass by the name RuntimeExceiption is derived.
 - RuntimeException and it's subclasses are unchecked in nature.
 -ex. ArrayIndexOutOfBoundExeption, NullPointerException, ArithmeticException...
@@ -36,3 +36,15 @@ In almost all the other lang. all the exceptions are unchecked by default.
 
 -- RuntimeException e = new RuntimeException("Insufficient Balance!");
 if you throw a runtime exception then you don't need to specify the throws in the signature.
+
+Few try-catch points to notw:
+- A single try may have multiple catch blocks, to handle every exception explicitly.
+- we can have nested try-catch blocks
+- A finally block is always executed (even if you return from the try-catch block)
+	except when you call System.exit(0) in the try-catch block.
+- In exception chaining we can pass the cause the cause of the exception also.
+	(Refer to com.training.exception.ex3.java)
+- the fillInStackTrace() method in exception will reinitialize a new stackTrace and the root call will be shown from the line were we call this method.
+- Exception Suppression in Java happens when one exception is thrown while another is already being handled. 
+	Java automatically suppresses the original exception in favor of the new one.
+	(Refer com.training.exception.Supression.java)
