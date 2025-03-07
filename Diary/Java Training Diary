@@ -1,0 +1,392 @@
+Java Training Diary
+
+Lecture 2
+Date: 19/02/2025
+
+Topics Discussed:
+- Basics of JAVA
+  - Datatypes
+    - Primitive
+      byte, short, int, long, float, double, char, Boolean
+
+    - Non-primitive (Objects)
+      - For objects memory is allocated dynamically, and for primitives memory is fixed.
+      
+      String str = "Java";
+      Arrays: int [] array = new int[10];
+      
+      - Wrapper Classes
+        Integer, Float,...
+
+
+  - Loops and Conditions
+    - if/else if/else, switch/case
+    - for, while, do while
+
+
+  - OOP
+    - What is an Object ?
+      An object is a representation/description of a thing(physical/logical) or an entity before
+      we answer this question, let's assume that we call everything around us in an object
+      - laptop, headphone, mobile phone, etc.
+      
+      - An object has
+        - state/data/attributes/properties/features/characteristics
+        - behaviour/functionality
+     
+  - In programming, an object is described using a class
+    - a class is a template/prototype/skeleton for creating object
+
+
+Tasks:
+Check about implicit and explicit conversion ✅ 
+Link: https://www.geeksforgeeks.org/type-conversion-java-examples/
+
+Check about BigInteger and BigDecimal ✅ 
+Link: https://www.baeldung.com/java-bigdecimal-biginteger
+Code: In src folder's default package
+ 
+Check about Unicode (UTF) ✅
+Link: https://www.geeksforgeeks.org/what-is-unicode/
+
+Check about need for Wrapper Classes ✅
+Link: https://www.geeksforgeeks.org/wrapper-classes-java/
+
+Check about Java HotSpot(TM) ✅
+Link: https://www.youtube.com/watch?v=6a4Id3lj7Sw
+Link: https://chatgpt.com/share/67c3127c-1a98-8004-8fe5-aaa6adb3c166
+
+Check about What is an Object ? in deep 
+
+Check out Regex for password and email validation ✅
+
+
+
+**********************************************************************************
+Lecture 3
+Date: 20/02/2025
+
+Topics Discussed:
+
+- Abstraction
+  - a software representation/model of any real world entity.
+    ex. 
+    class Color {
+         int r, g b;
+    }
+    Color c = new Color(127, 127, 127);
+  
+  - as soon as you create a class, you have achieved abstraction.
+  - there are 4 ways of achieving abstraction in java
+    - class, interface, Enum, annotations (@)
+
+
+- Encapsulation
+  - unit
+  - as soon as you create a class in java, you have achieved abstraction and encapsulation as well.
+
+- Inheritance
+  - IS-A relationship between classes
+
+  - There is one more way of creating relationship between classes
+    - HAS-A relationship between classes
+
+
+
+
+Tasks:
+Check about abstraction, encapsulation in more detail
+Check about OOAD (Object Oriented Analysis and Design)
+Check about HAS-A relationship between classes (Association)
+Check about Aggregation and composition, Generalization and Specialization
+
+
+
+**********************************************************************************
+Lecture 4
+Date: 21/02/2025
+
+Topics Discussed:
+
+- Polymorphism
+  
+
+
+
+
+**********************************************************************************
+Lecture 5
+Date: 24/02/2025
+
+Topics Discussed:
+- Abstract class
+- Interface
+
+
+Tasks:
+When to go for abstract class and interface with example ? ✅
+Link: http://digitalocean.com/community/tutorials/difference-between-abstract-class-and-interface-in-java
+
+Practical Examples on interfaces. ✅
+Link: https://www.csharp.com/article/java-interfaces-and-their-implementation-in-real-world/
+
+
+
+
+
+**********************************************************************************
+Lecture 6
+Date: 25/02/2025
+
+Topics Discussed:
+- Wrapper classes are immutable
+- Overriding vs Overloading
+- Polymorphic code (e.g. Vehicle car = new Car();)
+- Constructor(default and parameterised) calling in parent and child class
+- Downcasting references (parent to child)
+- Overview of Internal working of String
+
+
+Tasks:
+Java uses pass by value or pass by reference ? ✅
+Link: https://www.digitalocean.com/community/tutorials/java-is-pass-by-value-and-not-pass-by-reference
+
+When to use Wrapper classes and when to use Primitive ? ✅
+
+DDLJ soundwave bajao java program se (just for interest)
+
+Why StringBuilder is faster than StringBuffer ? When to use both ✅
+Link: https://www.digitalocean.com/community/tutorials/string-vs-stringbuffer-vs-stringbuilder
+
+Concatenation internally coverts to StringBuilder.append() so why it is slow ? ✅
+Link: https://incusdata.com/blog/string-concatenation-slow
+
+
+
+
+
+**********************************************************************************
+Lecture 7
+Date: 26/02/2025
+
+Topics Discussed:
+- Exploring String Class from Jdk 8 docs
+- Object class
+- toString() method overriding
+
+
+
+Tasks:
+Explore advance functions of String class and make document. ✅
+
+Override clone method in Object class. ✅
+
+JNI ✅
+Link: https://www.baeldung.com/jni#3-jni-elements-in-code-java-and-cc
+
+
+
+
+**********************************************************************************
+Lecture 8
+Date: 27/02/2025
+
+Topics Discussed:
+- static, Classloader, memory management in static variable and methods, Stack. 
+- final
+- enums
+- Interface
+- inner class
+- How to compile java files inside package in terminal 
+  Source code should be in src and byte code should be in bin folder
+  Example:  
+  PS C:\Users\miral.gudhka> cd .\eclipse-workspace\
+  PS C:\Users\miral.gudhka\eclipse-workspace> cd .\Java-Training\
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training> javac -d bin src/com/training/oop/*.java 
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training> java -cp bin com.training.oop.App
+
+- How to create jar file of whole Java-Training folder
+  Example:
+  for creating jar file - 
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training\bin> jar cvf ../java-training-jar .
+
+  for viewing content of jar file - 
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training\bin> jar tf ../java-training-jar
+
+
+- How to create executable jar file
+  Example:
+  creating custom manifest file - 
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training\bin> jar cfm ../java-training-2 ../example_manifest.txt .
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training\bin> java -jar ..\java-training-2
+
+  By mentioning entry point while creating jar file
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training\bin> jar cfe ../java-training-jar com.training.oop.App .                    
+  PS C:\Users\miral.gudhka\eclipse-workspace\Java-Training\bin> java -jar ..\java-training-jar
+ 
+
+Tasks:
+- Investigate about enums with examples, enums vs class. ✅
+Link: https://www.digitalocean.com/community/tutorials/java-enum
+      https://www.reddit.com/r/java/comments/nvtdm/classes_vs_enums/?rdt=42076
+      https://chatgpt.com/share/67c34390-496c-8004-a5e8-087b0ded4b9d
+
+- Investigate about Multiple inheritance in java. ✅
+Link: https://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html
+
+- How to create document for our java code. ✅
+Link: https://www.baeldung.com/javadoc
+
+
+
+**********************************************************************************
+Lecture 9
+Date: 28/02/2025
+
+Topics Discussed:
+- Access Modifiers (default, public, private and protected) 
+  Link: https://www.geeksforgeeks.org/access-modifiers-java/
+- Inner Classes and Anonymous Inner Classes
+- Lambda Expressions
+
+
+Tasks:
+Explore OOP, Functional Programming, Reactive Programming, Functional Reactive Programming ✅
+Link: https://www.datacamp.com/blog/introduction-to-programming-paradigms
+      https://www.geeksforgeeks.org/functional-programming-paradigm/
+      https://levelup.gitconnected.com/okay-but-what-exactly-is-reactive-programming-64ca2aabd1aa
+      https://chatgpt.com/share/67c34352-9038-8004-8250-19b965205855
+
+Inner classes info, examples, pros cons, etc. ✅
+Link: https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html
+      https://www.programiz.com/java-programming/nested-inner-class
+      https://docs.oracle.com/javase/tutorial/java/javaOO/innerclasses.html
+
+Read Java Generics docs given by Majrul sir ✅
+Link: https://www.programiz.com/java-programming/generics
+      https://www.baeldung.com/java-generics
+
+
+
+
+**********************************************************************************
+Lecture 10
+Date: 04/03/2025
+
+Topics Discussed:
+- Exception
+  An error which may occur during the execution of the program.
+
+- Exception Handling
+  Ability to deal with the exception that has occurred.
+  
+- java.lang.Exception class is the parent of all exceptions in Java.
+
+- Object
+  - Throwable
+    - There are two subclasses derived from Throwable class (Error & Exception)
+    - Error
+      Generally used for reporting system level errors
+    - Exception
+      Generally used for reporting application level errors
+      There are two types of exceptions, checked and unchecked.
+      checked
+      - compiler checks if the exception has been handled or not
+        Exception class and it's subclasses are checked in nature.
+        ex: IOException, SQLException
+      unchecked
+      - compiler doesn't checks if the exception has been handled or not
+        from Exception class, a special subclass by the name RuntimeException is derived
+        RuntimeException and it's subclass are unchecked in nature
+        ex: ArrayIndexOutOfBoundException, NullPointerException, ArithmeticException
+
+
+
+Tasks with code:
+What is Stack trace and how to print it ? 
+Link: https://stackoverflow.com/questions/3988788/what-is-a-stack-trace-and-how-can-i-use-it-to-debug-my-application-errors
+      https://stackify.com/java-stack-trace/
+
+Can a singe try have multiple catch blocks ?
+
+Can a try .. catch block have nested try ..catch blocks ?
+
+Can we catch multiple exceptions in a single catch block ?
+
+What is exception chaining ? ✅
+Link: https://www.baeldung.com/java-chained-exceptions
+
+How to investigate the stack trace programmatically ?
+
+What is the role of finally block ? ✅
+Link: https://www.datacamp.com/doc/java/finally
+
+
+
+
+**********************************************************************************
+Lecture 11
+Date: 05/03/2025
+
+Topics Discussed:
+- Collections in Java
+  - arrays
+  - List, Set and Map are the 3 commonly used collection types.
+
+
+
+Tasks:
+getMessage vs getLocalizedMessage
+Link: https://www.baeldung.com/java-localize-exception-messages
+
+enableSuppression
+Link: https://www.baeldung.com/java-suppressed-exceptions
+
+writeableStackTrace
+
+Thread.UncaughtExceptionHandler
+
+Collections (improvement in new versions also if any)
+
+Internal working of hash set in java (hash table buckets)
+
+Different applications of ArrayList vs HashSet vs LinkedList
+
+
+
+
+**********************************************************************************
+Lecture 12
+Date: 06/03/2025
+
+Topics Discussed:
+- Why is Java Collections called framework ?
+- Default size of ArrayList
+- Sorted Set, Comparable, Comparator
+- Internal sorting algo of java
+- primitive in collections
+- Markable Interfaces (RandomAccess, Cloneable, Serializable)
+- Generics
+
+
+Tasks:
+Method difference in ArrayList and LinkedList
+methods in java.util.collections
+Collections in java.util.concurrent
+
+
+
+
+**********************************************************************************
+Lecture 13
+Date: 07/03/2025
+
+Topics Discussed:
+- Streams in java
+- 
+
+
+Tasks:
+Pros, cons, application, etc for every collection discussed.
+Record in java. class vs record
+More practice on streams api
