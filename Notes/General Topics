@@ -125,3 +125,13 @@ What is the difference between frameworks and APIs?
 
 - marker interfaces don't have any method.
 - marker interface examples -> RandomAccess interface, Serializable interface, Cloneable interface.
+
+Vetor and HashMap are synchronised.
+By default the collections are not thread safe.
+
+if you want to make your collections thread safe use Collections API 
+    ex. Collections.synchronisedList(/*pass a list here*/);
+        Collections.synchronizedMap(/*Pass a map here*/);
+
+Don't rely on ConcurrentModificationException for Catching it. 
+
