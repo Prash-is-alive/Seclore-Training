@@ -1,0 +1,94 @@
+Collection vs Collections
+
+-Collection
+  It is an interface which provides guidelines (methods) to be implemented by any collection (eg. List Set & Queue).
+
+- Collections
+  It is a utilty class that provides static methods to work on or return collections.
+  ex. sort(), shuffle(), min(), max(), reverse().
+
+THE COLLECTION FRAMEWORK
+
+- mainly divided into -> List, Set, Queue & Map (not directly implements the framework but usually used with them).
+
+List -> Ordered, Allows Duplicates
+Set -> unordered, does not alllow duplicates
+Queue -> FIFO order, used in Scheduling tasks
+Maps ->  Key Value pair
+
+( By default, any common collection will not allow reading while writing (in multi thread env.) to prevent reading some stale data )
+
+--Implementations of LIST--
+
+		List<Integer> unmodifiableList = Collections.unmodifiableList(ls); //creates a view of the original list.
+		ls.add(34); //changing the original list will also change the unmodifiable list. but you can't modify the view (unmodifiable list) directly.
+    List<Integer> immutableList = List.of(1, 2, 3); 
+			immutableList.add(45); //cannot modify this original list also.
+
+- ArrayList
+  why? ->  for Fast Retrival (RandomAccess)
+  - The ArrayList internally works on the principles of array only with an initial array size of 10.
+    When the size (10) is full and we are trying to add a new element to it then it creates a new array of size 1.5x and copies all the elements to it.
+    Initially we should try to explictly specify the size of the arraylist based on average elements we think will be there in the arraylist.
+  - List ls = new ArrayList(); // this is valid! will be treated as -> List<Object> ls = new ArrayList<>();
+    This is not recommended since it's not typeSafe. it will be easy to add any Object in this list, but tough to do any processing on it. 
+  - List<String> list1 = new CopyOnWriteArrayList<String>();  // this will ALLOW reading when someone is writing
+  - ArrayList supports null elements.
+
+- LinkedList
+  Why? -> For adding/ deleting elements faster.
+  - The problem of recurrent increasing capacity in arraylist is also solved here, since linkedList stores elements in the free space and links them together.
+  - It supports null elements. but you can't sort it based on data after then.
+
+- Vector
+  Why? Thread-safe alternative to ArrayList
+  Vectors fall under legacy classes.
+
+- Stack
+  Last In First Out (LIFO) operations
+
+--Implementations of SET--
+
+- HashSet
+  Why? Faster Retrival, order does not matter and allow uniques only.
+  - HashSet stores data using a hash function. and hence it cannot store duplicates.
+
+- LinkedHashSet
+  Why? OrderMatters and does not allow duplicates.
+  - Similiar to HashSet, but also links values to each other for maintaining order.
+
+- TreeSet
+  Why? Need the elements in SORTED ORDER (internally uses tree structure).
+  - Provides O(log n) operations.
+
+--Implementations of QUEUE--
+
+- LinkedList (Queue implementation)
+  Why? General purpose queue
+
+- Priority Queue
+  Why? To store the elements in sorted order in a queue/
+  - It provides O(1) for Retrival of Highest/Lowest priority elements.
+
+- ArrayDeque
+  Why? Fastest performance for both stack & queue operations
+  - It outperforms Stack and Queue (when implemented by LinkedList) due to its array-based implementation and lack of synchronization overhead.
+  - It can be used as both a stack (LIFO) and a queue (FIFO) with efficient operations for both use cases.
+
+--Implementations of MAP--
+
+  Normal Maps can contain only 1 null key.
+  But, their concurrent (Thread-Safe) versions do not support any null key.
+
+- HashMap	
+  Why? Fastest lookup (O(1)), but unordered
+
+- LinkedHashMap	
+  Why? Maintains insertion order
+
+- TreeMap	
+  Why? Sorted by keys (O(log n) operations)
+
+- ConcurrentHashMap	
+  Why? Thread-safe alternative to HashMap
+
