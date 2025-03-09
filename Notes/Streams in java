@@ -1,0 +1,36 @@
+Stream API in Java 8+
+- It is used to process collections (lists, sets, maps)
+- It does not modify the original data structure instead produces a new one.
+- Popular operations include => filter(), map(), reduce(), forEach().
+- Analogy => source -> intermediate operations -> terminal operations
+
+Intermediate vs Terminal Operations
+  ☑ Intermediate Operations (Lazy)
+    - Transform a stream but don’t execute immediately.
+    Examples: filter(), map(), sorted(), distinct()
+  ☑ Terminal Operations
+    - Trigger execution of the stream.
+    Examples: forEach(), collect(), count(), reduce()
+
+- A Stream can only be traversed once. If you need to process the data again, create a new Stream.
+
+map vs filter
+- map() => Transforms elements (can change type of the elements).
+- filter() => filters out elements based on some given condition in the filter.
+
+Sorted
+- Default sorting (natural order), sorted().
+  ex. nums.stream().sorted() //default ascending order sorting.
+
+- Custom sorting (using Comparators).
+  ex. nums.stream().sorted(Comparators.reverseOrder()) //reverse order sorting.
+  ex. nums.stream().sorted((x,y)->x-y);
+
+Reduce
+- It is used to combine elements in a stream.
+  ex. nums.stream().reduce(0, (a,b)->a+b) //sum of all the nums. a starts with 0, b is each element.
+  ex. nums.stream().reduce(Integer::max) //maximum element.
+  ex. names.stream().reduce((s1,s2)-> s1.length() > s2.length ? s1 : s2) // returns the longest string.
+
+
+
