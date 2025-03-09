@@ -46,3 +46,8 @@ Collectors
   - Splits data into true & false.
   ex. Map<Boolean, List<Integer>> mapEvenOdds = nums.stream().collect(partitioningBy(n->n%2==0))
       //output: {false=[1, 3, 5, 7, 9], true=[2, 4, 6, 8]}
+
+ParallelStreams: By Default all the streams are sequenial in java.
+  ex. names.parallelStream().forEach(System.out::println);
+  when to use parallel streams?
+  -> Parallel Streams must be used for large datasets. for small data it may cause slow performance due to thread overhead.
