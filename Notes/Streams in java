@@ -51,3 +51,4 @@ ParallelStreams: By Default all the streams are sequenial in java.
   ex. names.parallelStream().forEach(System.out::println);
   when to use parallel streams?
   -> Parallel Streams must be used for large datasets. for small data it may cause slow performance due to thread overhead.
+  -> Parallel streams reside in a ThreadPool called the ForkJoinPool. 
