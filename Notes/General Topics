@@ -65,7 +65,7 @@ This slows down the performance since many useless buffer objects are created.
 - for matching a String to a case in Switch Case, the strings in case blocks are converted integers (stored in the form of hashmaps) the values are then compared.
 
 - HashMap internally uses both LinkedList asnd B-tree.
-- ArrayList Dynamically increases it's size. The default value is 10. after adding more elements it then creates a new element with 1.5x the original size.
+- ArrayList Dynamically increases it's size. The default value is 10. after adding more elements it then creates a new element with (1.5x + 1) the original size.
     So adding elements to an ArrayList frequently may cause performance overheads.
 - Integer.valueOf(x) caches values between -128 to 127, so repeated calls within this range reuse the same object.
 - A try-finally block will always exec. even after the return statement is called.
