@@ -135,3 +135,6 @@ if you want to make your collections thread safe use Collections API
 
 Don't rely on ConcurrentModificationException for Catching it. 
 
+- Binary Search using Collections.
+Collections.sort(list1, (s1,  s2) -> s2.compareTo(s1)); //if using custom sorting
+int index = Collections.binarySearch(list1, "Java", (s1,  s2) -> s2.compareTo(s1)); // then need to specify that custom sorting (comparator) here also.
