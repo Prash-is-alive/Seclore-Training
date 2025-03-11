@@ -1,0 +1,23 @@
+I/O Stream
+
+usually used while:
+- user input
+- communication betweem two devices
+- read/write from disk
+- communicate with a website
+
+how to use?
+open -> use -> close
+
+Byte Streams (Binary format)
+  - InputStream
+  - OutputStream
+ex. Images, videos.
+
+Character Stream
+  - Reader
+  - Writer
+ex. any text doc. HTML,XML,CSS,txt,etc...
+
+
+
