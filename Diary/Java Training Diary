@@ -74,7 +74,7 @@ Topics Discussed:
     class Color {
          int r, g b;
     }
-    Color c = new Color(127, 127, 127);
+    Color c = new Color(127, 127, 127);  // gray color
   
   - as soon as you create a class, you have achieved abstraction.
   - there are 4 ways of achieving abstraction in java
@@ -346,9 +346,14 @@ writeableStackTrace
 
 Thread.UncaughtExceptionHandler
 
+Collections in java
+Link: https://www.digitalocean.com/community/tutorials/collections-in-java-tutorial
+
 Collections (improvement in new versions also if any)
 
 Internal working of hash set in java (hash table buckets)
+Link: https://javaconceptoftheday.com/how-hashset-works-internally-in-java/
+      https://medium.com/@salvipriya97/java-hashmap-internal-implementation-and-working-e7abfab0698f
 
 Different applications of ArrayList vs HashSet vs LinkedList
 
@@ -361,10 +366,13 @@ Date: 06/03/2025
 
 Topics Discussed:
 - Why is Java Collections called framework ?
-- Default size of ArrayList
+- Default size of ArrayList -> 10 and will increase by 50% + 1 i.e. from 10 to 16
 - Sorted Set, Comparable, Comparator
+  Link: https://www.digitalocean.com/community/tutorials/comparable-and-comparator-in-java-example
+        https://www.digitalocean.com/community/tutorials/strategy-design-pattern-in-java-example-tutorial
+
 - Internal sorting algo of java
-- primitive in collections
+- primitive in collections -> Third-party libraries
 - Markable Interfaces (RandomAccess, Cloneable, Serializable)
 - Generics
 
@@ -383,10 +391,127 @@ Date: 07/03/2025
 
 Topics Discussed:
 - Streams in java
-- 
+- Function Interface
+- Multi-Threading
 
 
 Tasks:
 Pros, cons, application, etc for every collection discussed.
+Factory Methods in Collections
 Record in java. class vs record
-More practice on streams api
+More practice on streams api (avg, sum, count, etc...)
+Common Function Interfaces in java
+Types of thread
+Semaphores and various locking mechanism
+
+
+
+
+**********************************************************************************
+Lecture 14
+Date: 10/03/2025
+
+Topics Discussed:
+- XML and JSON
+  Format in which data is represented
+  
+- XML (Extensible Markup Language)
+  Parsing in Java (JAXP & JAXB)  
+
+- JSON (JavaScript Object Notation)
+  lightweight
+  Jackson API for JSON parsing. Its is a third-party library
+
+
+Tasks:
+Atomic Wrapper Class.
+Link: https://www.naukri.com/code360/library/atomic-variables-in-java
+
+Runnable vs Callable
+
+Future API in java
+
+Thread Pooling
+
+Explore about Threads and modifications in it.
+
+Practice on XML on Weekend
+Check about XPath
+Practice on JSON parsing using Jackson
+
+
+
+
+**********************************************************************************
+Lecture 15
+Date: 11/03/2025
+
+Topics Discussed:
+- Streams
+
+- I/O Streams
+  Byte Streams (InputStream & OutputStream) -> .mp3, .png, .jpg, etc.
+  Character Streams (Reader & Writer) -> json, xml, etc.
+
+- DBMS Driver -> networking logic mainly -> (e.g. JDBC, ODBC, ADO.NET, etc)
+- Driver Manager -> Manages several DBMS Drivers
+
+- How to run JDBC code from terminal
+  C:\Users\miral.gudhka\eclipse-workspace\Java-Training>java -cp bin;C:\Users\miral.gudhka\Downloads\mysql-connector-j-9.2.0\mysql-connector-j-9.2.0\mysql-connector-j-9.2.0.jar com.training.jdbc.DBInfo
+  // or
+  C:\Users\miral.gudhka\eclipse-workspace\Java-Training>set classpath=C:\Users\miral.gudhka\Downloads\mysql-connector-j-9.2.0\mysql-connector-j-9.2.0\mysql-connector-j-9.2.0.jar;bin
+C:\Users\miral.gudhka\eclipse-workspace\Java-Training>java com.training.jdbc.DBInfo
+
+
+Tasks: 
+Complete Programs given by Sir in teams
+Practice on XPath
+FileInputStream v/s BufferedInputStream
+NIO Buffering
+PreparedStatement vs Statement (Check in terms of safety and performance also)
+
+
+
+
+**********************************************************************************
+Lecture 16
+Date: 12/03/2025
+
+Topics Discussed:
+- JDBC further remaining topics
+
+- Logging
+   recording events
+   levels
+    - info, warning, error, etc
+
+
+Tasks:
+Types of JDBC Drivers (In java we use 4th type)
+Explore about JDBC
+DAO Design Pattern
+logger properties file (logging.properties)
+Complete TODOs in eclipse
+
+
+
+
+**********************************************************************************
+Lecture 17
+Date: 13/03/2025
+
+Topics Discussed:
+- annotations (@) 
+    nothing but metadata
+
+- HTML Basics
+  HTML5 Features
+
+
+Tasks:
+Aggregation and composition in detail with examples
+Encapsulation and Abstraction in detail with examples
+Check about Reflection API
+check about various annotation fields (@Documented, @Inherited, etc)
+Try custom annotation with reflection api
+check about Obfuscating
