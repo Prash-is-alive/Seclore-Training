@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script>
+      function fetch() {
+        var city = document.getElementById("city").value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            const response = JSON.parse(this.responseText);
+            const temp = Math.round(response.main.temp - 273.15);
+            document.getElementById("result").innerHTML =
+              "<h3>Current temp in " +
+              city +
+              " is " +
+              temp +
+              " degree celcius!</h3>";
+          }
+        };
+
+        var url =
+          "https://api.openweathermap.org/data/2.5/weather?q=" +
+          city +
+          "&appid=138b91f7502c917df454a94449df5c18";
+        xhttp.open("GET", url, true);
+        xhttp.send();
+
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return fetch()">
+      Enter city : <input type="text" id="city" />
+      <button type="submit">Fetch Weather</button>
+      <div id="result"></div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body onload="showProgress()">
+    <progress value="0" max="100" id="bar" class="bar"></progress>
+  </body>
+  <script>
+    function showProgress() {
+     var x=  setInterval(() => {
+        console.log("hello");
+        var pb = document.getElementById("bar");
+        pb.value += 20;
+        if (pb.value >= 100){
+            console.log("done");
+            clearInterval(x);
+        } 
+      }, 1000);
+    }
+  </script>
+</html>

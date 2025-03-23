@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <script>
+            var arr = []
+            arr[0] = 10;
+            arr[1] = 20;
+            arr[2] = 30;
+            arr.push(10)
+            arr.push(20)
+            arr.push(30)
+
+            var arr2 = new Array();
+
+            //              0       1           2       3
+            var names = ['Aditi', 'Visharad', 'Raj', 'Mansi'];
+ 
+            // names.unshift('Prashant');  //add an element to the start of the array
+            // names.push('Arul'); // add an element to the end of an array
+
+            // console.log(names);
+
+            // names.shift(); // remove the first element from the array
+            // names.pop(); //remove the last element from the array.
+
+            // console.log(names);
+
+            console.log('................')
+            // names.forEach(display); //internally for each element it will call display
+
+            // function display(name,index) {
+            //     console.log(name);
+            // }
+
+            // names.forEach((name,index) => {
+            //     console.log(name);
+            // })
+
+            var persons = [
+                {name: 'Majrul', number: 1234567890, email: 'majrul@gmail.com'},
+                {name: 'Vasuki', number: 9876543210, email: 'vasuki@outlook.com'},
+                {name: 'Abhishek', number: 1122334455, email: 'abhishek@gmail.com'},
+                {name: 'Shashidhar', number: 9988776655, email: 'shashidhar@outlook.com'}
+            ]
+
+            function retrieveNames() {
+                var names = persons.map(logicOfExtraction);
+
+                function logicOfExtraction(person) {
+                    return person.name; //TODO: return name and email
+                }
+
+                return names;
+            }
+            function retrieveNamesAndEmail() {
+                var namesAndEmail = persons.map(logicOfExtraction);
+
+                function logicOfExtraction(person) {
+                    return {name: person.name, email: person.email};
+                    // return [ person.name, person.email];
+                }
+
+                return namesAndEmail;
+            }
+
+            // var names = retrieveNames();
+            // console.log("fetching only the names..");
+            // console.log(names);
+
+            // var namesAndEmail = retrieveNamesAndEmail();
+            // console.log("fetching  the names and email..");
+            // console.log(namesAndEmail);
+
+            function searchByDomain(domain) {
+                var personsFound = persons.filter(logicOfSearch);
+
+                function logicOfSearch(person) {
+                    return person.email.indexOf(domain) != -1;                  
+                }
+
+                return personsFound;
+            }
+
+            var personsFound = searchByDomain("gmail");
+            console.log("searching by email pattern..");
+            console.log(personsFound);
+
+            // function search(number) {
+            //     var personFound = persons.find(logicOfSearch);
+
+            //     function logicOfSearch(person) {
+            //         return person.number == number;
+            //     }
+
+            //     return personFound;
+            // }
+
+            // var person = search(9876543210);
+            // console.log("Search Result::")
+            // if(person)
+            //     console.log(person);
+            // else
+            //     console.log("no record found!");
+        </script>
+    </head>
+</html>

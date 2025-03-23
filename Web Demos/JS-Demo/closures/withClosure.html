@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script>
+		function addLinksWithClosure() {
+			for (var i = 0, link; i < 5; i++) {
+				link = document.createElement("a");
+				link.innerHTML = "LinkWithClosure " + i + "<br/>";
+				// Indexing a loop with a closure //
+				// Outer function is self-invoking function.
+				// In other words, outer function is defined and invoked.
+				// The outer function gets invoked with correct index, which
+				// will be the value that inner function takes when it gets executed.
+				link.onclick = (function(value) {
+					return function() {
+						alert(value);
+					}
+				})(i);
+				
+				document.body.appendChild(link);
+			}
+		}
+
+		addLinksWithClosure();
+	</script>
+
+</body>
+</html>

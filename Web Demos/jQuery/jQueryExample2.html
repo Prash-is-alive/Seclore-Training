@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          $(this).parent().next().remove();
+          var price = $(this).closest("li").attr("data-price");
+          var p = $("<p />").text(price+"₹");
+          $(this).parent().after(p);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li data-price="59,000">
+        <h2>iPhone 15</h2>
+        <img
+          src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70"
+          alt=""
+        />
+        <div><button>Get price</button></div>
+      </li>
+      <li data-price="89,000">
+        <h2>iPhone 16</h2>
+        <img
+          src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/8/w/5/-original-imah4jyfwr3bfjbg.jpeg?q=70"
+          alt=""
+        />
+        <div><button>Get price</button></div>
+      </li>
+      <li data-price="79,000">
+        <h2>Samsung S24</h2>
+        <img
+          src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/u/i/y/-original-imah4zp7chcqfzwh.jpeg?q=70"
+          alt=""
+        />
+        <div><button>Get price</button></div>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: Tektur;
+}
+body {
+  background-color: #f1f1f1;
+}
+.header {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  position: sticky;
+  top: 0; 
+  width: 100%;
+  /* background-image: url("https://as1.ftcdn.net/v2/jpg/04/73/67/64/1000_F_473676400_VyH1ey15WGBA6L9MILjha6thtMVfuRh2.jpg"); */
+}
+
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column.side {
+  float: left;
+  width: 15%;
+  padding: 15px;
+  text-align: justify;
+  background-color: white;
+  margin: 5px;
+}
+
+.column.main {
+  float: left;
+  width: 67%;
+  padding: 15px;
+  text-align: justify;
+  background-color: white;
+  margin: 5px;
+  h2 {
+    text-align: center;
+  }
+}
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side,
+  .column.main {
+    width: 100%;
+  }
+}

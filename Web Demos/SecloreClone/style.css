@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.pre-header {
+  background-color: #231325;
+  padding: 12px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.pre-header > a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2em;
+}
+
+header {
+  background-image: url("./assets/waves_gradient.png");
+  object-fit: cover;
+  min-height: 70vh;
+  padding: 30px 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 8rem;
+  position: sticky;
+  top: 0;
+}
+
+.sticky-active {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #851f3a;
+}
+
+.header-links > a {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.header-links > a:hover{
+  opacity: 1;
+}
+
+.get-demo-link {
+  background-color: white;
+  color: #81243b !important;
+  border-radius: 1em;
+  padding: 13px;
+  opacity: 1 !important;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 8rem;
+  width: 70vw;
+
+  .heading-title {
+    font-family: "Roboto", Sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1em;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .sub-heading-title {
+    font-family: "Roboto", Sans-serif;
+    font-size: 52px;
+    line-height: 1em;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .get-started-btn {
+    width: fit-content;
+    background-color: #231325;
+    font-size: 0.9375rem;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+    line-height: 1em;
+    cursor: pointer;
+  }
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #f0f0f0;
+  padding: 3rem 0;
+  /* gap: give some value to this */
+
+  h2 {
+    font-family: "Roboto", Sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.3em;
+    text-align: center;
+    margin: 0;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+
+    .card {
+      background-color: white;
+      margin: 1rem;
+      padding: 2rem;
+      width: 40%;
+
+      .img-container {
+        margin: 0px 20px 24px 0px;
+        img {
+          width: 75px;
+        }
+      }
+
+      h3 {
+        font-size: 42px;
+        color: #851f3a;
+        margin: 0px 0px 0px 0px;
+      }
+
+      .card-description {
+        font-size: 18px;
+        line-height: 1.5em;
+        margin: 24px 0px 10px 0px;
+      }
+
+      .pointers-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .pointer-column {
+          list-style: none;
+          padding: 0 20px;
+
+          .pointer {
+            padding: 20px 10px;
+
+            .checked-icon {
+              color: #e6244e;
+              padding-right: 10px;
+            }
+
+            .pointer-text {
+              display: inline;
+              font-weight: 400;
+              line-height: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+  .why-seclore-btn > button {
+    border-radius: 30px 30px 30px 30px;
+    padding: 16px 24px 16px 24px;
+    background-color: #e6244e;
+    border: none;
+    color: white;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+}

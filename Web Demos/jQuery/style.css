@@ -1,0 +1,22 @@
+li {
+  list-style-type: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+  margin-bottom: 1rem;
+}
+
+button{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+}

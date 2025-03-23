@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+
+      $(function () {
+        $("#submitBtn").click((e) => {
+          e.preventDefault();
+
+          let city = $("#city").val();
+          let url =
+            "https://api.openweathermap.org/data/2.5/weather?q=" +
+            city +
+            "&appid=138b91f7502c917df454a94449df5c18";
+
+
+          $.get(url, (data, status) => {
+            let temp = Math.round(data.main.temp - 273.15);
+            if (status === "success") {
+              $("#result").html(
+                "<h3>Current temp in " +
+                  city +
+                  " is " +
+                  temp +
+                  " degree celcius!</h3>"
+              );
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return fetch()">
+      Enter city : <input type="text" id="city" />
+      <button type="submit" id="submitBtn">Fetch Weather</button>
+      <div id="result"></div>
+    </form>
+  </body>
+</html>

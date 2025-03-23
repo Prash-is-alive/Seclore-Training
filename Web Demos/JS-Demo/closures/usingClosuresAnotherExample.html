@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var MyModule = (function() {
+	//private
+	var msg = "Hello World";
+
+	//private
+	function sayHello() {
+		console.log(msg);
+	}
+	
+	//public
+	return {
+		publicSayHello : function() {
+			// sayHello();
+			console.log(msg);
+		}
+	}
+})();
+
+MyModule.publicSayHello();
+</script>
+</head>
+<body>
+</html>

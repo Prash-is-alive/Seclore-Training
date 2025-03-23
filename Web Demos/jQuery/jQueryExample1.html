@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        //alert("jQuery loaded...");
+        $("h1").text("Hello world@");
+        $(".small").text("small Hello world@");
+        $("#smallHeading").text("more small Hello world@");
+
+        $("h1").first().css("color", "red");
+        $("h1").eq(1).css("color", "blue");
+      });
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+    <h1></h1>
+    <h2 class="small"></h2>
+    <h3 id="smallHeading"></h3>
+  </body>
+</html>

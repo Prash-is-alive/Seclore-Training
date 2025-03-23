@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            //JavaScript object
+            var personObj = {name: 'Majrul', email: 'majrul@gmail.com', city: 'Mumbai', phoneNumber: 1234567890};
+            //Converting JavaScript Object to JSON
+            var personAsJSON = JSON.stringify(personObj);
+
+            console.log(typeof personObj);
+            console.log(personObj);
+
+            console.log(typeof personAsJSON);
+            console.log(personAsJSON);
+
+            localStorage.setItem('personData', personAsJSON);
+        </script>
+    </head>
+    <body>
+        <a href="json-example2.html">Continue</a>
+    </body>
+</html>

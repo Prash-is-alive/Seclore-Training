@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script>
+		function addLinksWithoutClosure() {
+			for (let i = 0, link; i < 5; i++) { //change this to var
+				link = document.createElement("a");
+				link.innerHTML = "LinkWithoutClosure " + i + "<br/>";
+				// Indexing a loop without closure
+				//
+				// Inner anonymous function is defined with // the value of variables of outer function
+				// when the outer function is executed. 
+				link.onclick = function() {
+					alert(i);
+				};
+				document.body.appendChild(link);
+			}
+		}
+
+		addLinksWithoutClosure();
+	</script>
+
+</body>
+</html>

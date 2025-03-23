@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $(".move-up").click(function () {
+          var row = $(this).closest("tr");
+          var previousRow = row.prev("tr");
+
+          if (previousRow.length) {
+            row.detach();
+            previousRow.before(row);
+          }
+        });
+
+        $(".move-down").click(function () {
+          var row = $(this).closest("tr");
+          var nextRow = row.next("tr");
+
+          if (nextRow.length) {
+            row.detach();
+            nextRow.after(row);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>Emp no</th>
+        <th>name</th>
+        <th>salary</th>
+        <th>action</th>
+      </thead>
+      <tr>
+        <td>1001</td>
+        <td>john</td>
+        <td>10000</td>
+        <td>
+          <a href="#" class="move-up">up </a> |
+          <a href="#" class="move-down">down</a>
+        </td>
+      </tr>
+      <tr>
+        <td>1002</td>
+        <td>smith</td>
+        <td>20000</td>
+        <td>
+          <a href="#" class="move-up">up </a> |
+          <a href="#" class="move-down">down</a>
+        </td>
+      </tr>
+      <tr>
+        <td>1003</td>
+        <td>Jack</td>
+        <td>30000</td>
+        <td>
+          <a href="#" class="move-up">up </a> |
+          <a href="#" class="move-down">down</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

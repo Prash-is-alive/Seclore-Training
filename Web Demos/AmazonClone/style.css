@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    margin: 5rem 36rem 0 36rem;
+    border-radius: 8px;
+    border: 1px solid #d5d9d9;
+    padding: 14px 18px;
+    gap: 1.2rem;
+
+    h1 {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 36px;
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      padding-left: 2px;
+      padding-bottom: 8px;
+      color: #0f1111;
+    }
+
+    input {
+      width: 100%;
+      background-color: #fff;
+      height: 31px;
+      padding: 3px 7px;
+      line-height: normal;
+      border-color: #888c8c;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(15, 17, 17, 0.15) inset;
+      outline: 0;
+    }
+
+    input:focus {
+      border-color: #007185;
+      outline-width: 3px;
+      outline-style: solid;
+      outline-color: #2162a1;
+      outline-offset: 2px;
+    }
+    .mobile-number-fields {
+      width: 100%;
+
+      select {
+        background: #f0f2f2;
+        border-color: #d5d9d9;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .number-data {
+        display: flex;
+        gap: 6px;
+      }
+    }
+
+    .username-data-fields {
+      width: 100%;
+    }
+
+    .password-fields {
+      width: 100%;
+    }
+
+    .context-message-section {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 0;
+      text-align: left;
+      font-size: 12px;
+      line-height: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    .mobileClaimDisclosureMessageRelaxed {
+      font-size: 12px;
+      line-height: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      width: 100%;
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      border-radius: 99px;
+      background: 0 0;
+      box-shadow: none;
+      background-color: #ffd814;
+      padding: 8px 0;
+    }
+
+    hr {
+      width: 100%;
+    }
+
+    .sign-in-link-row {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
