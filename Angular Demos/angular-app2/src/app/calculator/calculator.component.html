@@ -1,0 +1,26 @@
+<form class="container">
+  <div>
+    <label for="num1">Enter number 1</label>
+    <input
+      class="form-control"
+      type="number"
+      name="num1"
+      id="num1"
+      [(ngModel)]="number1"
+    />
+  </div>
+  <div>
+    <label for="num1">Enter number 2</label>
+    <input
+      class="form-control"
+      type="number"
+      name="num1"
+      id="num1"
+      [(ngModel)]="number2"
+    />
+  </div>
+  <button (click)="add()">Add</button>
+  <button (click)="subtract()">subtract</button>
+</form>
+
+<div *ngIf="result">Result: {{ result }}</div>

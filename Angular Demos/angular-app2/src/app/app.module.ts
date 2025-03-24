@@ -7,6 +7,7 @@ import { LuckyNumberComponent } from './lucky-number/lucky-number.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { FormsModule } from '@angular/forms';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     HelloWorldComponent,
     LuckyNumberComponent,
     ProductListingComponent,
-    SimpleFormComponent
+    SimpleFormComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
