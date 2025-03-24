@@ -1,0 +1,9 @@
+<button (click)="loadProducts()">SHOW PRODUCTS</button>
+    <div *ngIf="products">
+      <div class="card" *ngFor="let p of products">
+        <!-- <img src="{{p.imgUrl}}" alt="" srcset=""> -->
+        <img [src]="p.imgUrl" />
+        <h3>{{ p.name | uppercase }}</h3>
+        <h4>{{ p.price | currency:'₹' }}</h4>
+      </div>
+    </div>
