@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'simple-form',
@@ -6,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simple-form.component.css'],
 })
 export class SimpleFormComponent implements OnInit {
-  name!: string;
-  age!: number;
+  naam: string = 'Prashant';
+  age: number = 21;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   check() {
-    console.log(this.name, this.age);
+    console.log(this.naam, this.age);
+  }
+  check2(myForm: NgForm) {
+    if (myForm.valid) console.log(this.naam, this.age);
   }
 }

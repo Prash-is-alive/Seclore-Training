@@ -1,0 +1,15 @@
+<form action="">
+  <div>
+    <label for="num1">Enter number 1:</label>
+    <input type="number" #num1="ngModel" name="something" [(ngModel)]="no1" />
+  </div>
+  <div>
+    <label for="num2">Enter number 2:</label>
+    <input type="number" #num2="ngModel" name="something12" [(ngModel)]="no2" />
+  </div>
+  <button (click)="add()">add</button>
+  <button (click)="add2(num1, num2)">add2</button>
+  <div class="" *ngIf="no1">number is {{ no1 }} number2 {{no2}}</div>
+</form>
+
+<!-- #num1 -> template variable -->

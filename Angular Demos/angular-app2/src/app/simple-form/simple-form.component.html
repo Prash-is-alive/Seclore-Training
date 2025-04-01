@@ -1,4 +1,5 @@
-<form (ngSubmit)="check()">
+<!-- <form (ngSubmit)="myForm.valid && check()" #myForm="ngForm"> -->
+<form (ngSubmit)="check2(myForm)" #myForm="ngForm">
   <div class="form-group">
     <label for="name">Enter your name:</label>
     <input
@@ -6,21 +7,47 @@
       class="form-control"
       id="name"
       name="name"
-      [(ngModel)]="name"
+      [(ngModel)]="naam"
+      required
+      minlength="2"
+      #name="ngModel"
     />
+    <!-- <div
+      class="alert alert-danger"
+      *ngIf="name.invalid && (name.dirty || name.touched)"
+    > -->
+    <div class="alert alert-danger" *ngIf="myForm.submitted && name.invalid">
+      <div *ngIf="name.hasError('required')">Name is required!</div>
+      <div *ngIf="name.hasError('minlength')">
+        Name should contain atleast 2 characters
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <label for="age">Enter your age:</label>
     <input
       type="number"
       class="form-control"
-      id="age"
+      id="personAge"
       name="age"
       [(ngModel)]="age"
+      #personAge="ngModel"
+      min="18"
+      max="99"
+      required
     />
+    <!-- <div
+      class="alert alert-danger"
+      *ngIf="personAge.invalid && (personAge.dirty || personAge.touched)"
+    > -->
+    <div class="alert alert-danger" *ngIf="myForm.submitted && personAge.invalid">
+      <div *ngIf="personAge.hasError('required')">Age is required!</div>
+      <div *ngIf="personAge.hasError('min')">Age must be atleast 18!</div>
+      <div *ngIf="personAge.hasError('max')">Age cannot go beyond 99!</div>
+    </div>
   </div>
   <button type="submit" class="btn">Submit</button>
 </form>
-<div *ngIf="name || age">
-  <h1>Your name is {{ name }} and age is {{ age }}</h1>
+<div *ngIf="naam || age">
+  <h1>Your name is {{ naam }} and age is {{ age }}</h1>
 </div>
