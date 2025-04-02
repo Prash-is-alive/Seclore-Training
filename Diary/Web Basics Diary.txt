@@ -1,0 +1,58 @@
+Lecture 2
+Date: 17/03/2025
+
+Topics Discussed:
+- Website Layout
+
+
+Tasks:
+Make clone of seclore.com using html and css.
+
+
+
+
+**********************************************************************************
+Lecture 3
+Date: 18/03/2025
+
+Topics Discussed:
+- Amazon Sign Up page.
+- var vs global vs let in js
+- arrays, forEach, map, filter, find in js
+- closures in js
+- json in js
+- jQuery
+
+
+
+Tasks:
+Make clone of login page of flipkart.com
+Why does chrome always show latest value in console
+Write equivalent of json-example3.html using jQuery ✅
+
+
+
+
+**********************************************************************************
+Lecture 4
+Date: 19/03/2025
+
+Topics Discussed:
+- Intro to Node.js
+  - Module in node.js
+  - npm
+
+- Intro to TypeScript
+  - typescript is converted to javascript at the end
+
+- Intro to Angular
+
+
+
+Tasks:
+Read about Blocking and Non-Blocking architecture
+Practice ES6 and Typescript along with java.
+Explore HTML5 new Tags and features.
+
+
+

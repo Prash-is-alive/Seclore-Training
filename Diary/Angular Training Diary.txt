@@ -1,0 +1,44 @@
+**********************************************************************************
+Lecture 2
+Date: 24/03/2025
+
+Tasks: 
+How to import Bootstrap in Angular
+Take 2 number from user using forms and display its addition
+
+
+
+
+**********************************************************************************
+Lecture 3
+Date: 01/04/2025
+
+Topic discussed:
+() - denotes event binding
+[] - property/attribute binding
+Validation in template-driven forms
+Reactive forms in Angular
+Validation in reactive forms
+
+
+Tasks: 
+Check out: https://angular.dev/guide/forms/template-driven-forms
+
+try code from this repo: https://github.com/majrul/sbi-angular-training/tree/main/src/app
+Template-driven and reactive forms from above repo
+
+
+
+
+**********************************************************************************
+Lecture 4
+Date: 02/04/2025
+
+Topic discussed:
+- Routing in Angular
+- Data passing between components
+
+
+Tasks:
+template vs reactive forms 
+check out majrul sir's repo for example on the topics discussed today

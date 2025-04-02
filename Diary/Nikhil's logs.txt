@@ -1,0 +1,319 @@
+11/02/2025 (Tuesday)
+
+Tasks:
++ Detailed study of ACID properties
++ IT installation MySQL, Java JDK 17, Eclipse/IntelliJ
++ Database architectures (at least 1 page)
+
+**************************************************
+
+12/02/2025 (Wednesday)
+
+**************************************************
+
+13/02/2025 (Thursday)
+
+Tasks:
++ Normalization in detail (with examples)
++ Query order of execution
++ Practical examples of Joins
++ Types of queries with examples (DDL, DML, etc.)
++ Types of keys (& anomalies)
+- Triggers
++ Assignment
+ + ER Diagram
+ + Schema Diagram
+
+Doubts:
++ 51, 65, 67
+
+**************************************************
+
+14/02/2025 (Friday)
+
+tasks:
++ Transactions
++ Views & Indexes
++ ER Models
++ NoSQL vs RDBMS
+
+**************************************************
+
+17/02/2025 (Monday)
+
+**************************************************
+
+18/02/2025 (Tuesday)
+
++ For ER Diagram assignment
++ Find what all applications in Java JDK bin folder does
++ Find what functionalities are provided by different flags in java (mentioned in java -h)
++ Frequently used terminologies in java
+
+**************************************************
+
+19/02/2025 (Wednesday)
+
+- var keyword in Java
+- explicit type conversion while initialising long variable (attach L at end of value)
+- '\u' is appended with Unicode value to store corresponding character
+- Wrapper classes are useful when some modules/classes require object as input rather than primitives (e.g. Collections)
+
+Tasks:
++ BigInteger and BigDecimal for storing values without any limits (assignment: study more about it)
++ HotSpot VM
++ What is object (from computer science pov)
++ Regex for password validation and email
+
+**************************************************
+
+20/02/2025 (Thursday)
+
+Tasks:
++ Detailed study of Abstraction
++ Study about Object-Oriented Analysis and Design (OOAD)
++ Study about HAS-A relationship (Association)
++ Study about Aggregation and Composition
++ Study about Generalization and Specialization
+
+**************************************************
+
+21/02/2025 (Friday)
+
+Tasks:
++ Study about static, final, interface, abstract keywords
+
+**************************************************
+
+24/02/2025 (Monday)
+
+Tasks:
++ Examples of when to use abstract class and interface (difference between them)
++ Practical examples on interfaces
+
+**************************************************
+
+25/02/2025 (Tuesday)
+
+- Wrapper classes are immutable
+- Constructor is called after memory is initialised for object
+- Is constructor is overloaded then default constructor must be explicitly created, if constructor is not overloaded then compiler provides default constructor
+
+Tasks:
++ Does Java use pass by value or pass by reference (stackoverflow)
++ Find out which classes are immutable in Java
++ StringBuffer vs StringBuilder (use case)
++ String concatenation internally uses StringBuilder's append method so why is it slow?
+
+**************************************************
+
+26/02/2025 (Wednesday)
+
+Tasks:
++ Experiment String class methods
++ Override clone method (shallow copy and deep copy)
++ JNI
+
+**************************************************
+
+27/02/2025 (Thursday)
+
+- Be in root project directory
+  run for compilation: javac -d <folder where class files are to be stored> <absolute class name>
+  run for execution: java -cp <path to folder containing package> <absoluter class name>
+
+Tasks:
+- Create doc for string methods practiced on 26/02/2025
++ Study enums (difference between class and enum; are varaibles, methods, constructors allowed; practical examples)
++ https://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html
++ Inner classes
++ Creating java docs
+
+**************************************************
+
+28/02/2025 (Friday)
+
+- An anonymous class should be child of some parent (must extend some class or must implement some interface)
+- Anonymous function can only work with interface having only one method
+
+Tasks:
++ Study programming models
++ Inner class (examples, pros and cons)
++ https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html
++ Generics
+
+**************************************************
+
+04/03/2025 (Tuesday)
+
+- Maximum contiguous limit in java is Integer.MAX_VALUE
+- Errors in java are divided into exceptions and errors
+- Errors represent low level issue, such as out of memory error, stack overflow
+- Exceptions are errors occuring due to logic of code
+- throws is not necessary with unchecked exceptions
+
+Tasks:
++ Errors in java (errors, exceptions, checked, unchecked, throw, throws, try-catch block)
++ What is Stack trace and how to print it?
++ Can a single try have multiple catch blocks?
++ Can a try .. catch block have nested try ..catch blocks?
++ Can we catch multiple exceptions in a single catch block?
++ What is exception chaining?
++ How to investigate the stack trace programatically?
+
+**************************************************
+
+05/03/2025 (Wednesday)
+
+Tasks:
++ getMessage vs getLocalizedMessage
++ enableSuppression
++ writable stack trace
++ UncaughtExceptionHandler in Thread
++ Collections (also study improvements in collections)
++ Method reference operator
++ Internal working of hash set in java (hash table buckets)
++ How does java expand and shrink arraylist internally
++ Comparisons between different collections
+
+**************************************************
+
+06/03/2025 (Thursday)
+
+Tasks:
++ API vs Framework in Java
++ Different methods between ArrayList and LinkedList
++ Collections in java.util.concurrent
++ marker interface in Java
+
+**************************************************
+
+07/03/2025 (Friday)
+
+- Legacy collections are synchronized
+- BIG JAVA
+
+Tasks:
++ Find out is there a method to expand size of collections
++ Factory methods in Collections
+- Record (Record vs Class)
+- Streams
+- Aggregate operations in streams
+- List of functional interfaces
+- Types of threads
+- How to use syncronized block
+
+**************************************************
+
+10/03/2025 (Monday)
+
+Tasks:
++ Atomic class
++ Callable class (Callable vs Runnable)
++ Future class
++ Thread pooling
+- XML and XSD (also study DTD)
+- What is xpath
+
+**************************************************
+
+11/03/2025 (Tuesday)
+
+- Reflection API
+
+Tasks:
+- xpath
+- nio
+
+**************************************************
+
+12/03/2025 (Wednesday)
+
+Tasks:
+- Types of JDBC drivers
+- Prepared statement in java.sql
+- Statement vs Prepared Statement (performance comparison)
+- Store driver url, username and password in a properties file for JDBC
+- Take table name from user and display all the records from that table (result set meta data)
+- DAO (Data Access Object) Design Pattern
+- logger properties file (logging.properties)
+- database meta data interface
+
+**************************************************
+
+13/03/2025 (Thursday)
+
+Tasks:
+- custom annotations (with reflection api)
+- Documented, Inherited annotations
+- Obfuscator
+
+**************************************************
+
+17/03/2025 (Monday)
+
+**************************************************
+
+18/03/2025 (Tuesday)
+
+Tasks:
+- Flipkart login page
+- let, var, scopes, global variables in js
+- why does chrome always show latest values of a variable in js (console.log)
+- closure in java, using let keyword for replacing closure
+- wheather api task using jQuery
+
+**************************************************
+
+24/03/2025 (Monday)
+
+Tasks:
+- Various ways of install bootstrap in angular project
+
+
+
+
+
+
+
+- Real life examples:
+ + Joins
+ - Normalization
+ - Views
+ - Index
+ - Abstraction
+ - Inheritance
+ - Association
+ - Aggregation
+ - Composition
+ - Generalization
+ - Specialization
+ - Access modifier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
