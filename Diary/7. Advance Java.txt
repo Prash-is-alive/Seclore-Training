@@ -1,0 +1,39 @@
+Lecture 1
+Date: 04/04/2025
+
+Topics Discussed: 
+- Web Application / Site
+  - Development
+    - Client side / Frontend
+      - HTML / CSS / JS
+      - React/Angular/...
+      - JSP
+    
+    - Server side / Backend
+      - Node.js
+      - Servlet
+
+  - Deployment
+    - Server Machines
+    - Cloud / Web hosting
+
+  - Software
+    - Web/HTTP Server
+      - Nginx, Apache HTTP server, Microsoft IIS,...
+
+    - Application Server
+      - Apache Tomcat
+      - JBoss, WebLogic, WebSphere, Glassfish,...
+
+    - Database Software
+
+    - Email Serve
+
+    - FTP Server
+
+
+Task:
+Read about Servlet, JSP, Tomcat, 
+Difference between Application and Web server
+What is Java EE, Java SE, etc ?
+    
