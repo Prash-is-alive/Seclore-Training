@@ -42,3 +42,20 @@ Topic discussed:
 Tasks:
 template vs reactive forms 
 check out majrul sir's repo for example on the topics discussed today
+
+
+
+
+**********************************************************************************
+Lecture 5
+Date: 03/04/2025
+
+Topic discussed:
+- testing in sbi-angular repo
+
+
+
+
+Tasks:
+optimized loader in small-app (sample code is in sbi-angular repo)
+Complete Phone Book Assignment in teams
