@@ -138,3 +138,16 @@ Don't rely on ConcurrentModificationException for Catching it.
 - Binary Search using Collections.
 Collections.sort(list1, (s1,  s2) -> s2.compareTo(s1)); //if using custom sorting
 int index = Collections.binarySearch(list1, "Java", (s1,  s2) -> s2.compareTo(s1)); // then need to specify that custom sorting (comparator) here also.
+
+MVC Architecture
+Model - View - Controller
+    Model: It represents the business layer of application. It is an object to carry the data that can also contain the logic to update controller if data is changed.
+    View: It represents the presentation layer of application. It is used to visualize the data that the model contains.
+    Controller: It works on both the model and view. It is used to manage the flow of application, i.e. data flow in the model object and to update the view whenever data is changed.
+In Java Programming, the Model contains the simple Java classes, the View used to display the data and the Controller contains the servlets.
+
+JavaBeans as model in MVC architecture
+- A JavaBean is just a standard. It is a regular Java class, except it follows certain conventions:
+    1. All properties are private (use getters/setters)
+    2. A public no-argument constructor
+    3. Implements Serializable.
