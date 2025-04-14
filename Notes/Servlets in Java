@@ -1,0 +1,39 @@
+What is a servlet?
+- A servlet is a java file that can handle requests and process that request to generate a response and send it to the client in the form of HTML (or other formats).
+
+- Client-Server model.
+Client sends request -> server gets the request and processes it -> server sends the response.
+
+2 Types of pages 
+-- Static Pages
+    - Already generated pages (predefined HTML) , that are sent directly on the request.
+-- Dynamic Pages
+    - Generated on the fly, while request processing.
+    
+    How Dynamic pages are loaded?
+    -> The client sends req to the server -> the server does not have the page ready -> the request is forwarded to the web container -> web container runs the appropriate servlet and generates the response.
+    
+    What's a web container? 
+    -> A runtime environment that manages the servlets. 
+      eg. Tomcat, GlassFish, JBoss, webSphere, etc.
+      It uses a deployment descriptor (web.xml) file for storing the configurations.
+      - it maps the requested url to the appropriate servlet file.
+
+for creating a servlet file, create a java class that extends HttpServlet class and override the doGet or doPost method to get started.
+
+HttpServlet, HttpServletRequest , HttpServletResponse are java interfaces, which are implemented by the apache tomcat.
+that's the reason we install apache tomcat server.
+
+we have 2 types of servers:
+Web servers -> tomcat, glassfish.
+application servers -> JBoss, etc.
+application servers are more advanced than web servers.
+
+tomcat can have many containers like-> 
+servlet container
+JSP container
+security container
+webSocket container
+JNDI container
+
+    
