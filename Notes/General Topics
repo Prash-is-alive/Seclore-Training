@@ -186,4 +186,36 @@ ServletContext
 502 – Bad Gateway
 503 – Service Unavailable (server busy or down)
 
+Differences in GET and POST
+    Get is limited to 2KB of data.
+    Post is virtually unlimited.
+    get sends data in the header, where as post sends it in the payload/body.
+    get urls can be bookmarked, post cannot.
+
+why ServletException is in the signature?
+-> it is a standard to throw any exception occured in the servlet using this ServletException.
+-> also IOException is raised when we face difficulty in writing the response, res.getWriter() or out.write();
+
+-> Redirect & Forward <-
+
+Redirect
+-> Client sends req to server -> server sends redirect call to client -> client sends a new req to the new route.
+-> request data is fresh and prev req data may not be retained, unless explicitly passed through parameters in the url.
+-> it goes through a round trip, hence it is not optimal to use.
+-> ex. req.sendRedirect("page2.jsp");
+
+Forward
+-> Client sends req to server -> server forwards this req to the new router (also passing the res & req objects)
+-> req data is retained. and the url does not change. the user is not known of the forwarding.
+-> ex. req.getRequestDispatcher("page2.jsp").forward(req,res);
+
+-> Data Scopes <-
+1. Page Scope - pageContext.setAttribute()
+2. Request scope - request.setAttribute()
+3. Session scope - session.setAttribute()
+4. Application scope (ServletContext) - application.setAttribute()
+
+-> getAttribute vs getParameter <-
+parameters are set by the client side, for eg. parameters can be set while submitting a form or by query parameters "?"
+attributes are programatically set in the client side code. for eg. req.setAttribute("data","some data");
 
