@@ -151,3 +151,39 @@ JavaBeans as model in MVC architecture
     1. All properties are private (use getters/setters)
     2. A public no-argument constructor
     3. Implements Serializable.
+
+-> ServletConfig vs ServletContext <-
+ServletConfig
+    Scope - One servlet	
+    Defined in - <init-param>	
+    Lifetime - Per servlet	
+    Use case - Servlet-specific setup	
+    ServletConfig - for providing information.
+
+ServletContext
+    Scope -	Entire app
+    Defined in - <context-param>
+    Lifetime - Application-wide
+    Use case - Shared info (e.g. company name, email)
+
+-> Http Error Codes <-
+
+1xx -> Informational
+2xx ->	Success
+3xx -> Redirection
+4xx -> Client errors (IMP)
+5xx -> Server errors (IMP)
+
+-> 4xx – Client Errors (Your Mistake)
+400 – Bad Request (invalid data)
+401 – Unauthorized (not logged in)
+403 – Forbidden (no permission)
+404 – Not Found (URL doesn’t exist)
+405 – Method Not Allowed (wrong HTTP method)
+
+-> 5xx – Server Errors (Server's Mistake)
+500 – Internal Server Error
+502 – Bad Gateway
+503 – Service Unavailable (server busy or down)
+
+
