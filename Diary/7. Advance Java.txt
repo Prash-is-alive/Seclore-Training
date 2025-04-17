@@ -85,7 +85,9 @@ Topic discussed:
 
 
 Tasks:
-How to achieve pre-compiled jsp since by default jsp compiled on first request
+How to achieve pre-compiled jsp since by default jsp is compiled on first request
+Link: https://www.ibm.com/docs/en/was-nd/8.5.5?topic=files-jsp-run-time-compilation-settings
+
 Implement remaining features in Quiz Web App
 
 
@@ -97,9 +99,149 @@ Date: 11/04/2025
 
 Topic discussed:
 - CRUD operation on database using web based interface
-- 
 
 
 Tasks:
 Architecture of servlet, tomcat
 Internal working of PreparedStatement
+
+What is a Servlet Container and how is it different from a Web Server?
+Link: https://pathum-liyanagama.medium.com/java-servlet-container-vs-application-server-vs-web-server-7471f89402ac
+      https://medium.com/@newbie42/what-is-web-container-application-server-and-web-server-83c537d8c50
+
+What is Servlet interface. What is GenericServlet. What is HttpServlet?
+Link: https://docs.oracle.com/javaee/7/api/index.html
+
+What is ServletContext ?
+
+What is the life cycle of a Servlet?
+
+What is the role of web.xml file? 
+
+What is load-on-startup in web.xml file?
+
+What is the role of ServletException and IOException used in the signature of
+         service/doGet/doPost method?
+
+Why is Servlet better than conventional CGI?
+
+What is SingleThreadModel interface?
+
+
+
+
+**********************************************************************************
+Lecture 6
+Date: 14/04/2025
+
+Topic discussed:
+- web.xml
+- Servlet life cycle
+- Servlet Interface, GenericServlet class, HttpServlet class
+- JspPage Interface
+- Web container (Context/Sandbox)
+- Session architecture
+- MVC architecture
+
+Tasks:
+Deploy app using manager in Tomcat ✅
+
+Check out http://localhost:8080/examples/ provided by Tomcat
+
+Collect more info about Catalina, Jasper & Juli
+Link: https://intojava.wordpress.com/2022/03/22/meet-tomcat-catalina/
+      
+TODO: In web.xml, try error-page tag and its page ✅
+Link: https://stackoverflow.com/questions/7066192/how-to-specify-the-default-error-page-in-web-xml
+
+Check about Java Bean in MVC architecture of java ✅
+Link: https://stackoverflow.com/questions/3295496/what-is-a-javabean-exactly
+
+Complete Servlet2.txt and JSP-Questions.txt
+
+
+
+
+**********************************************************************************
+Lecture 7
+Date: 15/04/2025
+
+Topic discussed:
+- Get and Post method
+- ServletException and IOException in signature of doGet and doPost
+- Redirect and forward
+- Data scopes
+  - page scope, request scope, session scope, context/application scope
+- getParameter vs getAttribute
+- <%-- comments --%>, tag for commenting java code in jsp file.
+- Filters
+- Listeners
+- Headers in HTTP
+- Custom tags in JSP
+
+
+Tasks:
+Name and use of Different JSP tags
+Versions of JSP and Servlet
+try session listener
+find more examples on different listener
+check out JSTL and try to implement it
+
+
+
+
+**********************************************************************************
+Lecture 8
+Date: 16/04/2025
+
+Topic discussed:
+- Apache Maven
+  - Project Management Tool
+  - Dependency (External) Management Tool
+  - Build Tool (Provides conveniency in Compile, Run, Test, package[jar/war],...)
+
+- compiling file from cmd and storing it in different directory
+  PS C:\Users\miral.gudhka\eclipse-workspace\maven-demo> javac -d "target/classes" -cp "C:\Users\miral.gudhka\.m2\repository\com\itextpdf\itextpdf\5.5.13.4\itextpdf-5.5.13.4.jar" "src/main/java/com/training/PdfWriteExample.java"
+
+- Running file from cmd
+  PS C:\Users\miral.gudhka\eclipse-workspace\maven-demo> java -cp "target\classes;C:\Users\miral.gudhka\.m2\repository\com\itextpdf\itextpdf\5.5.13.4\itextpdf-5.5.13.4.jar" com.training.PdfWriteExample
+
+- Compiling using maven in cmd
+- Running class file using maven in cmd
+- creating jar file using maven in cmd
+- creating executable jar file using maven in cmd
+- plugins in maven
+
+
+Tasks:
+Explore Features of Eclipse IDE
+Explore SNAPSHOT versioning
+Explore more about Maven and other topics apart from sir's teaching.
+
+
+
+
+**********************************************************************************
+Lecture 9
+Date: 17/04/2025
+
+Topic discussed:
+- Testing
+  - Developer Side Testing
+    - Unit Testing
+    - Integration Testing
+
+- Junit
+  - for testing java programs
+
+- Git
+  - Source Code Management tool
+
+
+Tasks:
+Explore more about QA/QC
+Explore more examples on Junit, Junit tags
+Try writing test case for sports scheduler
+Explore Git vs SVN
+Try git push and pull onto remote repository
+
