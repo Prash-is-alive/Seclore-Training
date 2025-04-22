@@ -107,7 +107,3 @@ Service service;
 > “**Spring says**: Let me take care of creating and wiring your objects. **You** just focus on writing clean, reusable logic.”
 
 This design pattern leads to **clean, testable, maintainable, and scalable** applications.
-
----
-
-Would you like a **project folder structure**, a **working demo**, or a **hands-on coding exercise** to try this yourself?
