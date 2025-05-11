@@ -19,5 +19,25 @@ Character Stream
   - Writer
 ex. any text doc. HTML,XML,CSS,txt,etc...
 
+Java IO is divided into two main parts:
+  Byte Stream & Character Stream
+    -> Byte Stream is used to read binary data
+    -> Character stream is used to read character data (supports unicode).
 
+Byte Stream is further divided into two:
+    Input Stream 
+    -> File input stream (too slow since reads only one byte at a time)
+    -> Buffered input stream (wrapper to the file input stream, reads data in the form of a buffer)
+    
+    Output Stream
+    -> FIle output stream
+    -> Buffered output stream
 
+Character Stream is also further divided into two:
+    Reader
+    -> File reader
+    -> Buffered File reader
+    
+    Writer
+    -> File Writer
+    -> Buffered File Writer
