@@ -222,3 +222,49 @@ attributes are programatically set in the client side code. for eg. req.setAttri
 --> java -verbose <MyMainClass>
 The above option will help us figure out what are the
 classes getting loaded when we run our application 
+-> Class Laoding Problem
+public static Translator getTranslator(String fileType) {
+     if (fileType.equals("doc")) {
+         return new WordTranslator();
+     } else if (fileType.equals("html")) {
+         return new HTMLTranslator();
+     } else if (fileType.equals("txt")) {
+         return new PlainTranslator();
+     } else if (fileType.equals("xml")) {
+         return new XMLTranslator();
+     } else {
+         return new DefaultTranslator();
+     }
+ } 
+If you enable –verbose option to run the above code, you will
+notice Translator, WordTranslator, HTMLTranslator, PlainTranslator,
+and XMLTranslator are all getting loaded in the VM 
+
+-> One solution
+public static Translator getTranslator(String fileType) {
+     try {
+         if (fileType.equals("doc")) {
+             return (Translator)Class.forName("WordTranslator").newInstance();
+         } else if (fileType.equals("html")) {
+             return (Translator)Class.forName("HTMLTranslator").newInstance();
+         } else if (fileType.equals("txt")) {
+             return (Translator)Class.forName("PlainTranslator").newInstance();
+         } else if (fileType.equals("xml")) {
+             return (Translator)Class.forName("XMLTranslator").newInstance();
+         } else {
+             return new DefaultTranslator();
+          }
+     } catch (Exception e) {
+         return new DefaultTranslator();
+     }
+}
+Using Reflection API, we can easily prevent eagerly loading of classes in the VM.
+
+--> Object LifeCycle
+- Created
+- In use (strongly reachable)
+- Invisible
+- Unreachable
+- Collected
+- Finalized
+- Deallocated
