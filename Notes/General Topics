@@ -219,3 +219,6 @@ Forward
 parameters are set by the client side, for eg. parameters can be set while submitting a form or by query parameters "?"
 attributes are programatically set in the client side code. for eg. req.setAttribute("data","some data");
 
+--> java -verbose <MyMainClass>
+The above option will help us figure out what are the
+classes getting loaded when we run our application 
