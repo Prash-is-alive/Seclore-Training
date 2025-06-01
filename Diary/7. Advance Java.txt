@@ -245,3 +245,158 @@ Try writing test case for sports scheduler
 Explore Git vs SVN
 Try git push and pull onto remote repository
 
+
+
+
+**********************************************************************************
+Lecture 10
+Date: 22/04/2025
+
+Topic discussed:
+- git remote add origin https://...
+- git push
+- git pull
+- git clone
+- resolving conflicts
+- branching in git
+- git in eclipse
+
+- Spring Framework
+  - Creating objects
+    - Option 1
+      -> We need to create an xml file and configure the class whose object has to be created
+    - Option 2
+      -> We will use annotation instead of xml.
+
+  - Managing dependencies between objects (DI)
+    
+
+
+Tasks:
+Explore mocking testing
+Explore Benefits of maven
+Explore singleton design pattern
+Explore various design patterns
+Explore DI realistic examples
+Explore Spring's DI feature
+
+
+
+
+**********************************************************************************
+Lecture 11
+Date: 23/04/2025
+
+Topic discussed:
+- Loose & tight Coupling
+- Spring and JDBC
+- properties tag in maven's pom.xml
+- Spring and Junit
+
+
+Tasks:
+Explore DI, IOC & Wiring (in detail)
+Link: https://www.geeksforgeeks.org/spring-difference-between-inversion-of-control-and-dependency-injection/
+      
+Explore Benefits of DataSource (Connection Pooling feature in detail)
+
+
+
+
+**********************************************************************************
+Lecture 12
+Date: 24/04/2025
+
+Topic discussed:
+- Analyzing performance of DriveManager for connecting to database.
+- Analyzing performance of DataSource(Connection Pooling) for connecting to database.
+- JDBC Template to reduce code
+- Hibernate ORM
+- Spring and Hibernate
+- Creating Relationship between tables using hibernate
+
+
+Tasks:
+Analyze the performance of statement and preparedStatement.
+Link: https://www.theserverside.com/news/1365244/Why-Prepared-Statements-are-important-and-how-to-use-them-properly
+
+Check out this link: https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing ✅
+
+Implement using BeanPropertyRowMapper, what if Product class has different field name than column name in db. ✅
+Link: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/BeanPropertyRowMapper.html
+
+Practice Spring with hibernate on weekend
+
+Try 1-M, M-M in hibernate
+
+
+
+
+**********************************************************************************
+Lecture 13
+Date: 28/04/2025
+
+Topic discussed:
+- IOC, DI & Wiring
+- Cascading Effect in Hibernate ORM
+- HQL/JPQL
+- Spring Data
+- Spring MVC
+- Spring MVC + Hibernate
+
+
+
+Tasks:
+how to write pre-compiled query in MySQL
+
+Check out this link: https://martinfowler.com/articles/injection.html
+
+Practice HQL/JPQL on your custom Hibernate ORM
+
+Implement Edit and Delete functionality in spring-mvc
+
+Check out benefits of Spring MVC
+
+Check about Spring MVC Architecture
+Link: https://medium.com/@kulkarniprabhakar2000/spring-mvc-a-comprehensive-guide-part-1-23c367520ac9
+      https://www.geeksforgeeks.org/spring-mvc-framework/
+
+
+
+
+**********************************************************************************
+Lecture 14
+Date: 29/04/2025
+
+Topic discussed:
+- Redirecting in spring
+- REST API in Spring
+- Spring and Angular integration
+
+
+Tasks:
+Try methods of Optional API
+PathParam vs RequestParam
+Investigate about DTO (Data Transfer Object)
+
+
+
+
+**********************************************************************************
+Lecture 15
+Date: 30/04/2025
+
+Topic discussed:
+- Spring Framework
+  - Creating Objects
+    - Option 3
+      --> Remove xml style configuration and replace it with java style configuration
+
+- Spring Boot Intro
+
+
+
+Tasks:
+check if we can write existsByEmail in CustomerRepository.java
+Implement EmailService class (details in CustomerService class)
+
