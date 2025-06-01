@@ -399,4 +399,22 @@ Topic discussed:
 Tasks:
 check if we can write existsByEmail in CustomerRepository.java
 Implement EmailService class (details in CustomerService class)
+Check about further configuration/setting in @Transactional annotation
 
+
+
+
+**********************************************************************************
+Lecture 16
+Date: 02/04/2025
+
+Topic discussed:
+- Implemented OrderService in spring-boot-intro
+- Java based configuration in spring-intro
+- Reading property values from app.properties in spring-intro
+- Dev, QA & Prod environments
+- Aspect Oriented Programming (AOP) in spring
+
+
+Tasks:
+Check about further configuration/setting in @Transactional annotation
